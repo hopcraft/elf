@@ -1,15 +1,9 @@
-<p align="center">
-  <a href="https://elf.aotu.io">
-    <img alt="ELF" src="https://misc.aotu.io/booxood/elf/logo.png" width="200">
-  </a>
-</p>
 
-ELF - 面向开发者的灵活可扩展的 HTML5 构建工具，提供命令行工具 elf（基于 Webpack），**无需构建配置文件即可进行开发**，可用来制作各种 HTML5 场景营销活动页面，也可自由的通过模板和组件的组合来快速定制开发。
+Spinoza ELF - 面向开发者的灵活可扩展的 HTML5 构建工具，提供命令行工具 spinoza-elf（基于 Webpack），**无需构建配置文件即可进行开发**，可用来制作各种 HTML5 场景营销活动页面，也可自由的通过模板和组件的组合来快速定制开发。本项目克隆自 Aotu 团队的 elf，按需做个性化修改。
 
-[**配置说明**](https://github.com/o2team/elf/blob/master/doc/CONFIGURATION.md)
-[**功能描述**](https://github.com/o2team/elf/blob/master/doc/DETAIL.md)
+[**配置说明**](https://github.com/hopcraft/elf/blob/master/doc/CONFIGURATION.md)
+[**功能描述**](https://github.com/hopcraft/elf/blob/master/doc/DETAIL.md)
 
-## 安装 [![NPM version][npm-version-image]][npm-version-url] [![Join the chat at https://gitter.im/o2team/elf](https://badges.gitter.im/o2team/elf.svg)](https://gitter.im/o2team/elf?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 > **`提醒`**
 由于依赖的包比较多，第一次安装耗时很长很长，请稍微耐心等待一下。
@@ -19,26 +13,30 @@ ELF - 面向开发者的灵活可扩展的 HTML5 构建工具，提供命令行�
 
 ```sh
 # 全局安装 Node >= 6
+
+# 卸载掉原 elf-cli
+$ npm uninstall -g elf-cli
+
 # mac/linux
-$ SASS_BINARY_SITE=https://npm.taobao.org/mirrors/node-sass/ PHANTOMJS_CDNURL=https://npm.taobao.org/mirrors/phantomjs/ npm install -g elf-cli --registry=https://registry.npm.taobao.org
+$ SASS_BINARY_SITE=https://npm.taobao.org/mirrors/node-sass/ PHANTOMJS_CDNURL=https://npm.taobao.org/mirrors/phantomjs/ npm install -g spinoza-elf-cli --registry=https://registry.npm.taobao.org --unsafe-perm=true --allow-root 
 # windows
-$ npm install -g elf-cli --registry=https://registry.npm.taobao.org --SASS_BINARY_SITE=https://npm.taobao.org/mirrors/node-sass/ --PHANTOMJS_CDNURL=https://npm.taobao.org/mirrors/phantomjs/
+$ npm install -g spinoza-elf-cli --registry=https://registry.npm.taobao.org --SASS_BINARY_SITE=https://npm.taobao.org/mirrors/node-sass/ --PHANTOMJS_CDNURL=https://npm.taobao.org/mirrors/phantomjs/
 ```
 
 ## 使用
 
 ```sh
 # 初始化项目
-$ elf init demo
+$ spinoza-elf init demo
 
 # 安装依赖
 $ cd demo && npm install
 
 # 开发运行
-$ elf start
+$ spinoza-elf start
 
 # 查看 help
-$ elf --help
+$ spinoza-elf --help
 ```
 
 ## 介绍

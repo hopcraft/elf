@@ -49,6 +49,33 @@ const cssLoader = [{
   }
 }]
 
+const LESS_LOADER = 'less-loader'
+let lessLoader = LESS_LOADER 
+if (config.lessLoaderOptions) {
+  lessLoader = {
+    loader: LESS_LOADER,
+    options: config.lessLoaderOptions
+  }
+}
+
+const SASS_LOADER = 'sass-loader'
+let sassLoader = SASS_LOADER 
+if (config.sassLoaderOptions) {
+  sassLoader = {
+    loader: SASS_LOADER,
+    options: config.sassLoaderOptions
+  }
+}
+
+const STYLUS_LOADER = 'stylus-loader'
+let stylusLoader = STYLUS_LOADER 
+if (config.stylusLoaderOptions) {
+  stylusLoader = {
+    loader: STYLUS_LOADER,
+    options: config.stylusLoaderOptions
+  }
+}
+
 module.exports = merge(baseWebpackConfig, {
   devtool: '#cheap-module-source-map',
   entry: wrapEntry(config.entry),
@@ -75,13 +102,13 @@ module.exports = merge(baseWebpackConfig, {
       use: ['style-loader'].concat(cssLoader)
     }, {
       test: /\.scss$/,
-      use: ['style-loader'].concat(cssLoader, 'sass-loader')
+      use: ['style-loader'].concat(cssLoader, sassLoader)
     }, {
       test: /\.less$/,
-      use: ['style-loader'].concat(cssLoader, 'less-loader')
+      use: ['style-loader'].concat(cssLoader, lessLoader)
     }, {
       test: /\.styl$/,
-      use: ['style-loader'].concat(cssLoader, 'stylus-loader')
+      use: ['style-loader'].concat(cssLoader, stylusLoader)
     }]
   },
   plugins: [
