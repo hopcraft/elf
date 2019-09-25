@@ -14,6 +14,7 @@ const imageLoaders = [{
   loader: 'url-loader',
   options: config.imgLoaderQuery
 }]
+
 const imageToBase64Loaders = [{
   loader: 'url-loader',
   options: {
@@ -38,6 +39,33 @@ const cssLoader = [{
     plugins: postcssPlugins
   }
 }]
+
+const LESS_LOADER = 'less-loader'
+let lessLoader = LESS_LOADER 
+if (config.lessLoaderOptions) {
+  lessLoader = {
+    loader: LESS_LOADER,
+    options: config.lessLoaderOptions
+  }
+}
+
+const SASS_LOADER = 'sass-loader'
+let sassLoader = SASS_LOADER 
+if (config.sassLoaderOptions) {
+  sassLoader = {
+    loader: SASS_LOADER,
+    options: config.sassLoaderOptions
+  }
+}
+
+const STYLUS_LOADER = 'stylus-loader'
+let stylusLoader = STYLUS_LOADER 
+if (config.stylusLoaderOptions) {
+  stylusLoader = {
+    loader: STYLUS_LOADER,
+    options: config.stylusLoaderOptions
+  }
+}
 
 const publicPath = config.outputCssPublicPath || config.output.publicPath
 
@@ -76,21 +104,21 @@ module.exports = merge(baseWebpackConfig, {
       test: /\.scss$/,
       loader: ExtractTextPlugin.extract({
         fallback: 'style-loader',
-        use: cssLoader.concat('sass-loader'),
+        use: cssLoader.concat(sassLoader),
         publicPath: publicPath
       })
     }, {
       test: /\.less$/,
       loader: ExtractTextPlugin.extract({
         fallback: 'style-loader',
-        use: cssLoader.concat('less-loader'),
+        use: cssLoader.concat(lessLoader),
         publicPath: publicPath
       })
     }, {
       test: /\.styl$/,
       loader: ExtractTextPlugin.extract({
         fallback: 'style-loader',
-        use: cssLoader.concat('stylus-loader'),
+        use: cssLoader.concat(stylusLoader),
         publicPath: publicPath
       })
     }]

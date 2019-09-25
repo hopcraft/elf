@@ -1,8 +1,21 @@
 
-Spinoza ELF - 面向开发者的灵活可扩展的 HTML5 构建工具，提供命令行工具 spinoza-elf（基于 Webpack），**无需构建配置文件即可进行开发**，可用来制作各种 HTML5 场景营销活动页面，也可自由的通过模板和组件的组合来快速定制开发。本项目克隆自 Aotu 团队的 elf，按需做个性化修改。
+Spinoza ELF - 面向开发者的灵活可扩展的 HTML5 构建工具，提供命令行工具 elf（基于 Webpack），**无需构建配置文件即可进行开发**，可用来制作各种 HTML5 场景营销活动页面，也可自由的通过模板和组件的组合来快速定制开发。本项目克隆自 Aotu 团队的 elf-cli，按需做个性化修改。相比原 elf-cli，主要做了以下扩展：
+> 1. 升级 lesss 到 3.8.1 版本，升级 less-loader 到 5.0.0 版本
+> 2. 新增支持在 .elf.config.js 配置中定义 lessLoaderOptions/sassLoaderOptions/stylusLoaderOptions
 
 [**配置说明**](https://github.com/hopcraft/elf/blob/master/doc/CONFIGURATION.md)
 [**功能描述**](https://github.com/hopcraft/elf/blob/master/doc/DETAIL.md)
+
+## 项目维护
+1. 下载依赖
+```sh
+$ sudo SASS_BINARY_SITE=https://npm.taobao.org/mirrors/node-sass/ PHANTOMJS_CDNURL=https://npm.taobao.org/mirrors/phantomjs/ npm install --registry=https://registry.npm.taobao.org
+```
+2. 开发功能
+3. 发布
+```sh
+$ npm publish
+```
 
 
 > **`提醒`**
@@ -18,7 +31,7 @@ Spinoza ELF - 面向开发者的灵活可扩展的 HTML5 构建工具，提供�
 $ npm uninstall -g elf-cli
 
 # mac/linux
-$ SASS_BINARY_SITE=https://npm.taobao.org/mirrors/node-sass/ PHANTOMJS_CDNURL=https://npm.taobao.org/mirrors/phantomjs/ npm install -g spinoza-elf-cli --registry=https://registry.npm.taobao.org --unsafe-perm=true --allow-root 
+$ sudo SASS_BINARY_SITE=https://npm.taobao.org/mirrors/node-sass/ PHANTOMJS_CDNURL=https://npm.taobao.org/mirrors/phantomjs/ npm install -g spinoza-elf-cli --registry=https://registry.npm.taobao.org --unsafe-perm=true --allow-root 
 # windows
 $ npm install -g spinoza-elf-cli --registry=https://registry.npm.taobao.org --SASS_BINARY_SITE=https://npm.taobao.org/mirrors/node-sass/ --PHANTOMJS_CDNURL=https://npm.taobao.org/mirrors/phantomjs/
 ```
@@ -27,16 +40,16 @@ $ npm install -g spinoza-elf-cli --registry=https://registry.npm.taobao.org --SA
 
 ```sh
 # 初始化项目
-$ spinoza-elf init demo
+$ elf init demo
 
 # 安装依赖
 $ cd demo && npm install
 
 # 开发运行
-$ spinoza-elf start
+$ elf start
 
 # 查看 help
-$ spinoza-elf --help
+$ elf --help
 ```
 
 ## 介绍

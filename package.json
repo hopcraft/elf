@@ -1,12 +1,12 @@
 {
   "name": "spinoza-elf-cli",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "HTML5 boilerplate and build tool",
   "scripts": {
     "commit": "git-cz"
   },
   "bin": {
-    "spinoza-elf": "./bin/elf.js"
+    "elf": "./bin/elf.js"
   },
   "engines": {
     "node": ">=6"
@@ -45,8 +45,8 @@
     "image-webpack-loader": "3.3.1",
     "inquirer": "3.2.0",
     "ip": "1.1.5",
-    "less": "2.7.2",
-    "less-loader": "4.0.5",
+    "less": "^3.8.1",
+    "less-loader": "^5.0.0",
     "lodash": "4.17.4",
     "node-sass": "4.5.3",
     "npm-install-webpack-plugin": "github:webpack-contrib/npm-install-webpack-plugin",
