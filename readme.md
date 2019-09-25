@@ -1,5 +1,5 @@
 
-Spinoza ELF - 面向开发者的灵活可扩展的 HTML5 构建工具，提供命令行工具 elf（基于 Webpack），**无需构建配置文件即可进行开发**，可用来制作各种 HTML5 场景营销活动页面，也可自由的通过模板和组件的组合来快速定制开发。本项目克隆自 Aotu 团队的 elf-cli，按需做个性化修改。相比原 elf-cli，主要做了以下扩展：
+Spinoza ELF - 面向开发者的灵活可扩展的 HTML5 构建工具，提供命令行工具 elf（基于 Webpack），**无需构建配置文件即可进行开发**，可用来制作各种 HTML5 场景营销活动页面，也可自由的通过模板和组件的组合来快速定制开发。本项目 fork 自 Aotu 团队的 elf-cli，按需做个性化修改。相比原 elf-cli，主要做了以下扩展：
 > 1. 升级 lesss 到 3.8.1 版本，升级 less-loader 到 5.0.0 版本
 > 2. 新增支持在 .elf.config.js 配置中定义 lessLoaderOptions/sassLoaderOptions/stylusLoaderOptions
 
